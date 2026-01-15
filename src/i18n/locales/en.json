@@ -1,0 +1,180 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "continue": "Continue",
+        "back": "Back",
+        "save": "Save",
+        "cancel": "Cancel",
+        "settings": "Settings",
+        "today": "Today",
+        "tomorrow": "Tomorrow",
+        "thisWeek": "This Week",
+        "due": "Due",
+        "completed": "Completed",
+        "inProgress": "In Progress",
+        "locked": "Locked",
+        "unlocked": "Unlocked",
+        "viewAll": "View All",
+        "learnMore": "Learn More"
+    },
+    "welcome": {
+        "title": "Pathways Pro",
+        "tagline": "Your journey to success starts here",
+        "getStarted": "Get Started",
+        "signIn": "Sign In",
+        "explorePaths": "Explore Career Paths"
+    },
+    "entry": {
+        "title": "How would you like to join?",
+        "subtitle": "Choose your entry method",
+        "schoolCode": {
+            "title": "School Code",
+            "description": "Enter your institution's unique code"
+        },
+        "magicLink": {
+            "title": "Magic Link",
+            "description": "Sign in with your email"
+        },
+        "directAccess": {
+            "title": "Direct Access",
+            "description": "Individual student registration"
+        }
+    },
+    "onboarding": {
+        "schoolCode": {
+            "title": "Enter School Code",
+            "subtitle": "Your school has provided a unique access code",
+            "placeholder": "Enter 6-digit code",
+            "verifying": "Verifying...",
+            "success": "School Verified!",
+            "error": "Invalid code. Please try again."
+        },
+        "schoolConfirm": {
+            "title": "Confirm Your School",
+            "subtitle": "Is this your institution?",
+            "schoolName": "School Name",
+            "location": "Location",
+            "curriculum": "Curriculum",
+            "confirm": "Yes, this is my school",
+            "notMySchool": "This isn't my school"
+        }
+    },
+    "gateZero": {
+        "title": "What describes you best?",
+        "subtitle": "This helps us personalize your experience",
+        "sniper": {
+            "title": "The Sniper",
+            "quote": "\"I know exactly what I want to pursue.\"",
+            "description": "You have a clear career goal and want a focused pathway."
+        },
+        "explorer": {
+            "title": "The Explorer",
+            "quote": "\"I'm still discovering my interests.\"",
+            "description": "You want to explore options and find your passion."
+        },
+        "strategist": {
+            "title": "The Strategist",
+            "quote": "\"I'm weighing a few options carefully.\"",
+            "description": "You have multiple interests and want to compare paths."
+        }
+    },
+    "dashboard": {
+        "greeting": "Hi, {{name}}!",
+        "pathwayLabel": "{{pathway}} Pathway",
+        "journeyProgress": "Journey Progress",
+        "tabs": {
+            "tasks": "Tasks",
+            "timeline": "Timeline",
+            "thisWeek": "This Week",
+            "milestones": "Milestones"
+        },
+        "checklist": {
+            "sectionTitle": "{{category}} ({{completed}}/{{total}})",
+            "recommendedTitle": "Recommended for you"
+        },
+        "timeline": {
+            "title": "Your Journey Timeline",
+            "subtitle": "Key milestones on your path to {{pathway}}"
+        },
+        "weekly": {
+            "title": "Week of {{date}}",
+            "tasksSummary": "{{completed}}/{{total}} tasks completed ({{percent}}%)"
+        },
+        "milestones": {
+            "title": "Your Achievements",
+            "summary": "{{unlocked}}/{{total}} milestones unlocked",
+            "nextMilestone": "Next Milestone",
+            "sessionsToGo": "{{count}} more study sessions to go!"
+        },
+        "aiAssistant": "Ask AI Assistant"
+    },
+    "persona": {
+        "sniper": {
+            "disciplineTitle": "Choose Your Discipline",
+            "disciplineSubtitle": "Select the field you want to pursue",
+            "universityTitle": "Select Target Universities",
+            "universitySubtitle": "Choose up to 5 universities that align with your goals",
+            "flightCheck": {
+                "title": "Flight Check Complete",
+                "status": "Ready for Takeoff",
+                "statusWarning": "Review Required"
+            }
+        },
+        "explorer": {
+            "assessmentTitle": "Discover Your Path",
+            "assessmentSubtitle": "Let's find what excites you",
+            "swipeTitle": "Swipe to Explore",
+            "swipeSubtitle": "Like cards that resonate with you",
+            "archetypeTitle": "Your Archetype",
+            "domainTitle": "Choose Your Domain"
+        },
+        "strategist": {
+            "setupTitle": "Set Up Comparison",
+            "setupSubtitle": "Select two paths to compare",
+            "headToHeadTitle": "Head to Head",
+            "tieBreakerTitle": "Tie Breaker",
+            "decisionTitle": "Make Your Decision"
+        }
+    },
+    "disciplines": {
+        "medicine": "Medicine",
+        "engineering": "Engineering",
+        "law": "Law",
+        "business": "Business",
+        "computerScience": "Computer Science",
+        "arts": "Arts & Design",
+        "sciences": "Natural Sciences",
+        "psychology": "Psychology"
+    },
+    "categories": {
+        "academic": "Academic",
+        "testPrep": "Test Prep",
+        "profileBuilding": "Profile Building",
+        "applications": "Applications"
+    },
+    "profile": {
+        "personalInfo": "Personal Information",
+        "email": "Email",
+        "school": "School",
+        "grade": "Grade",
+        "curriculum": "Curriculum",
+        "location": "Location",
+        "achievements": "Achievements",
+        "settings": "Settings",
+        "language": "Language",
+        "notifications": "Notifications",
+        "theme": "Theme"
+    },
+    "aiChat": {
+        "title": "AI Mentor",
+        "subtitle": "Your personal guidance assistant",
+        "placeholder": "Ask me anything..."
+    },
+    "accessibility": {
+        "skipToContent": "Skip to main content",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "openSettings": "Open settings",
+        "toggleComplete": "Mark as {{status}}"
+    }
+}

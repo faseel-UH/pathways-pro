@@ -1,0 +1,103 @@
+/* Search Filter Bar */
+.search-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    position: relative;
+    z-index: 10;
+}
+
+.search-bar-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: var(--space-4) var(--space-4) var(--space-4) 48px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    color: var(--color-text-primary);
+    font-size: var(--text-lg);
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-glass);
+}
+
+.search-input:focus {
+    outline: none;
+    background: rgba(30, 30, 40, 0.9);
+    border-color: var(--color-primary-500);
+    box-shadow: var(--shadow-glow-primary);
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-tertiary);
+    font-size: 20px;
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+.search-input:focus+.search-icon,
+.search-input:not(:placeholder-shown)+.search-icon {
+    color: var(--color-primary-400);
+}
+
+/* RTL Support for Icon */
+[dir="rtl"] .search-input {
+    padding: var(--space-4) 48px var(--space-4) var(--space-4);
+}
+
+[dir="rtl"] .search-icon {
+    left: auto;
+    right: 16px;
+}
+
+/* Filter Pills */
+.filter-pills {
+    display: flex;
+    gap: var(--space-3);
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.filter-pills::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.filter-pill {
+    padding: 8px 16px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    color: var(--color-text-secondary);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-text-tertiary);
+    color: var(--color-text-primary);
+}
+
+.filter-pill.active {
+    background: var(--color-primary-500);
+    border-color: var(--color-primary-400);
+    color: white;
+    box-shadow: var(--shadow-glow-sm);
+}

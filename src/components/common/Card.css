@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Card Component Styles
+   ========================================================================== */
+
+.card {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+/* Padding Options */
+.card--padding-none {
+    padding: 0;
+}
+
+.card--padding-sm {
+    padding: var(--space-4);
+}
+
+.card--padding-md {
+    padding: var(--space-6);
+}
+
+.card--padding-lg {
+    padding: var(--space-8);
+}
+
+/* Variants */
+.card--default {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card--glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+}
+
+.card--gradient {
+    background: transparent;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.card__gradient-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(244, 63, 94, 0.1) 100%);
+    z-index: 0;
+}
+
+.card--gradient .card__content {
+    position: relative;
+    z-index: 1;
+}
+
+.card--elevated {
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Interactive State */
+.card--interactive {
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+.card--interactive:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.card--interactive:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
+
+/* Selected State */
+.card--selected {
+    border-color: var(--color-primary-500) !important;
+    background: rgba(139, 92, 246, 0.08);
+}
+
+.card--selected.card--interactive:hover {
+    box-shadow: var(--shadow-glow-primary);
+}
+
+/* Card Content */
+.card__content {
+    position: relative;
+}
+
+/* Hover Effects for Interactive Cards */
+.card--interactive.card--default:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.card--interactive.card--glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary-400);
+}
+
+.card--interactive.card--gradient:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 4px 24px rgba(139, 92, 246, 0.2);
+}
+
+.card--interactive.card--elevated:hover {
+    box-shadow: var(--shadow-xl);
+}

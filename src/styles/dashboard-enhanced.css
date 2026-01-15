@@ -1,0 +1,483 @@
+/* ==========================================================================
+   Dashboard Premium Enhancements
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Dashboard Header - Premium Glassmorphism
+   -------------------------------------------------------------------------- */
+.dashboard-header {
+    position: relative;
+    padding: var(--space-6);
+    background: var(--gradient-hero);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.dashboard-header::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--color-primary-600) 0%, transparent 70%);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.dashboard-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.dashboard-user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.dashboard-avatar {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+}
+
+.dashboard-avatar-text {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-text-primary);
+}
+
+.dashboard-avatar-ring {
+    position: absolute;
+    inset: -3px;
+    border: 2px solid transparent;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-accent-500)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dashboard-greeting {
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard-name {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-text-primary);
+    line-height: 1.3;
+}
+
+.dashboard-pathway {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.dashboard-pathway::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-full);
+}
+
+.dashboard-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-primary-400);
+    transform: translateY(-1px);
+}
+
+.btn-icon-inner {
+    font-size: var(--text-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Progress Card - Premium Style
+   -------------------------------------------------------------------------- */
+.dashboard-progress-card {
+    position: relative;
+    padding: var(--space-5) var(--space-6);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-2xl);
+}
+
+.dashboard-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+}
+
+.dashboard-progress-label {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--color-text-secondary);
+}
+
+.dashboard-progress-value {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.progress-bar {
+    position: relative;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    overflow: visible;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-full);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.progress-bar-glow {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: var(--color-accent-400);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 20px var(--color-accent-400), 0 0 40px var(--color-accent-500);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.dashboard-progress-milestones {
+    position: relative;
+    height: 32px;
+    margin-top: var(--space-3);
+}
+
+.progress-milestone {
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+[dir="rtl"] .progress-milestone {
+    transform: translateX(50%);
+}
+
+.progress-milestone-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--color-neutral-600);
+    border: 2px solid var(--color-neutral-500);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+}
+
+.progress-milestone[data-complete="true"] .progress-milestone-dot {
+    background: var(--color-success-500);
+    border-color: var(--color-success-400);
+    box-shadow: 0 0 12px var(--color-success-500);
+}
+
+.progress-milestone-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Dashboard Tabs - Premium Design
+   -------------------------------------------------------------------------- */
+.dashboard-tabs {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--color-border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.dashboard-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.dashboard-tab {
+    position: relative;
+    flex: 1;
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.dashboard-tab:hover {
+    color: var(--color-text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.dashboard-tab.active {
+    color: var(--color-text-primary);
+}
+
+.dashboard-tab-icon {
+    font-size: var(--text-base);
+    transition: transform var(--transition-fast);
+}
+
+.dashboard-tab.active .dashboard-tab-icon {
+    transform: scale(1.1);
+}
+
+.dashboard-tab-label {
+    transition: all var(--transition-fast);
+}
+
+.dashboard-tab-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-full) var(--radius-full) 0 0;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 40px;
+        opacity: 1;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Dashboard Content
+   -------------------------------------------------------------------------- */
+.dashboard-content {
+    flex: 1;
+    padding: var(--space-6);
+    overflow-y: auto;
+    background: var(--color-background);
+}
+
+.dashboard-content-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   AI Chat FAB - Premium Floating Button
+   -------------------------------------------------------------------------- */
+.ai-chat-fab {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    box-shadow: var(--shadow-xl), var(--shadow-glow-primary);
+    transition: all var(--transition-base);
+    z-index: var(--z-sticky);
+}
+
+[dir="rtl"] .ai-chat-fab {
+    right: auto;
+    left: var(--space-6);
+}
+
+.ai-chat-fab:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: var(--shadow-xl), 0 0 50px rgba(139, 92, 246, 0.5);
+}
+
+.ai-chat-fab:active {
+    transform: scale(0.95);
+}
+
+.ai-chat-fab-icon {
+    font-size: var(--text-2xl);
+    position: relative;
+    z-index: 1;
+}
+
+.ai-chat-fab-pulse {
+    position: absolute;
+    inset: -4px;
+    border-radius: var(--radius-full);
+    background: var(--gradient-primary);
+    opacity: 0.4;
+    animation: fabPulse 2s ease-in-out infinite;
+}
+
+@keyframes fabPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   RTL Support
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .dashboard-pathway::before {
+    order: 1;
+    margin-left: var(--space-2);
+    margin-right: 0;
+}
+
+[dir="rtl"] .dashboard-tab-indicator {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+    .dashboard-header {
+        padding: var(--space-4);
+    }
+
+    .dashboard-progress-milestones {
+        display: none;
+    }
+
+    .dashboard-tab {
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .dashboard-tab-label {
+        display: none;
+    }
+
+    .dashboard-tab-icon {
+        font-size: var(--text-xl);
+    }
+
+    .dashboard-content {
+        padding: var(--space-4);
+    }
+
+    .ai-chat-fab {
+        width: 52px;
+        height: 52px;
+        bottom: var(--space-4);
+        right: var(--space-4);
+    }
+
+    [dir="rtl"] .ai-chat-fab {
+        right: auto;
+        left: var(--space-4);
+    }
+}
+
+@media (min-width: 768px) {
+    .dashboard-header-top {
+        align-items: center;
+    }
+
+    .dashboard-avatar {
+        width: 64px;
+        height: 64px;
+    }
+
+    .dashboard-name {
+        font-size: var(--text-2xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-content-inner {
+        max-width: 1000px;
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "common": {
+        "loading": "جارٍ التحميل...",
+        "continue": "متابعة",
+        "back": "رجوع",
+        "save": "حفظ",
+        "cancel": "إلغاء",
+        "settings": "الإعدادات",
+        "today": "اليوم",
+        "tomorrow": "غداً",
+        "thisWeek": "هذا الأسبوع",
+        "due": "موعد التسليم",
+        "completed": "مكتمل",
+        "inProgress": "قيد التنفيذ",
+        "locked": "مغلق",
+        "unlocked": "مفتوح",
+        "viewAll": "عرض الكل",
+        "learnMore": "اعرف المزيد"
+    },
+    "welcome": {
+        "title": "باثويز برو",
+        "tagline": "رحلتك نحو النجاح تبدأ هنا",
+        "getStarted": "ابدأ الآن",
+        "signIn": "تسجيل الدخول",
+        "explorePaths": "استكشف المسارات المهنية"
+    },
+    "entry": {
+        "title": "كيف تريد الانضمام؟",
+        "subtitle": "اختر طريقة الدخول",
+        "schoolCode": {
+            "title": "رمز المدرسة",
+            "description": "أدخل الرمز الفريد لمؤسستك"
+        },
+        "magicLink": {
+            "title": "رابط سحري",
+            "description": "سجل الدخول بالبريد الإلكتروني"
+        },
+        "directAccess": {
+            "title": "الوصول المباشر",
+            "description": "تسجيل الطالب الفردي"
+        }
+    },
+    "dashboard": {
+        "greeting": "مرحباً، {{name}}!",
+        "pathwayLabel": "مسار {{pathway}}",
+        "journeyProgress": "تقدم الرحلة",
+        "tabs": {
+            "tasks": "المهام",
+            "timeline": "الجدول الزمني",
+            "thisWeek": "هذا الأسبوع",
+            "milestones": "الإنجازات"
+        }
+    }
+}

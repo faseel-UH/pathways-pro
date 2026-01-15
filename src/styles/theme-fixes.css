@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Theme Fixes - Light/Dark Mode Overrides
+   ========================================================================== */
+
+/* ========== Light Mode Theme Overrides ========== */
+[data-theme="light"] .dashboard-header {
+    background: linear-gradient(180deg, var(--color-neutral-100) 0%, var(--color-neutral-50) 100%);
+    border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .dashboard-header::before {
+    background: radial-gradient(circle, var(--color-primary-200) 0%, transparent 70%);
+    opacity: 0.3;
+}
+
+/* Header blocks that stay dark in light mode - fix them */
+[data-theme="light"] .dashboard-header-content,
+[data-theme="light"] .dashboard-greeting,
+[data-theme="light"] .dashboard-title {
+    color: var(--color-text-primary);
+}
+
+/* Progress milestones container fix */
+.progress-milestones {
+    position: relative;
+    height: 32px;
+    padding: 0 var(--space-2);
+}
+
+.milestone {
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+/* Fix "Success" text going out of bounds */
+.milestone:last-child {
+    transform: translateX(-80%);
+}
+
+[dir="rtl"] .milestone:last-child {
+    transform: translateX(80%);
+}
+
+/* ========== Dark Mode Scrollbar ========== */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-neutral-600) var(--color-neutral-900);
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color-neutral-900);
+    border-radius: var(--radius-full);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-600);
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-neutral-900);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neutral-500);
+}
+
+/* Light mode scrollbar */
+[data-theme="light"] * {
+    scrollbar-color: var(--color-neutral-300) var(--color-neutral-100);
+}
+
+[data-theme="light"] *::-webkit-scrollbar-track {
+    background: var(--color-neutral-100);
+}
+
+[data-theme="light"] *::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-300);
+    border-color: var(--color-neutral-100);
+}
+
+[data-theme="light"] *::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neutral-400);
+}
+
+/* ========== Timeline Pulse Alignment Fix ========== */
+.timeline-progress-indicator {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-progress-pulse {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: var(--color-primary-500);
+    border: 3px solid var(--color-bg-app);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 16px var(--color-primary-500);
+    position: relative;
+    z-index: 2;
+}
+
+/* Pulsating ring around the dot */
+.timeline-progress-indicator::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--color-primary-500);
+    border-radius: var(--radius-full);
+    opacity: 0.4;
+    animation: timelineIndicatorPulse 2s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes timelineIndicatorPulse {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.1;
+    }
+}
+
+/* Timeline dot wrapper alignment fix */
+.timeline-dot-wrapper {
+    position: absolute;
+    left: calc(-1 * var(--space-10) + 6px);
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[dir="rtl"] .timeline-dot-wrapper {
+    left: auto;
+    right: calc(-1 * var(--space-10) + 6px);
+}
+
+/* Timeline dot pulse centered */
+.timeline-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary-500);
+    border-radius: var(--radius-full);
+    opacity: 0;
+    animation: timelineDotPulse 2s ease-in-out infinite;
+}
+
+@keyframes timelineDotPulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+}
+
+/* Active ring centered */
+.timeline-dot-active-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    border: 2px solid var(--color-primary-500);
+    border-radius: var(--radius-full);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ========== Light Mode Card Fixes ========== */
+[data-theme="light"] .checklist-item,
+[data-theme="light"] .timeline-card {
+    background: var(--color-bg-surface);
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .timeline-date-text {
+    background: var(--color-neutral-200);
+    color: var(--color-neutral-700);
+}
+
+[data-theme="light"] .sidebar {
+    background: var(--color-bg-surface);
+}

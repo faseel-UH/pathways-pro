@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Progress Ring Component Styles
+   ========================================================================== */
+
+.progress-ring {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-ring svg {
+    transform: rotate(-90deg);
+}
+
+/* Background Circle */
+.progress-ring__bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+/* Progress Circle */
+.progress-ring__progress {
+    fill: none;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-ring--animated .progress-ring__progress {
+    animation: progressRingFill 1.5s ease-out forwards;
+}
+
+@keyframes progressRingFill {
+    from {
+        stroke-dashoffset: var(--circumference, 283);
+    }
+}
+
+/* Label */
+.progress-ring__label {
+    position: absolute;
+    font-weight: var(--font-bold);
+    color: var(--color-text-primary);
+}
+
+/* Color Variants */
+.progress-ring--primary .progress-ring__progress {
+    stroke: url(#gradient-primary);
+}
+
+.progress-ring--primary .progress-ring__progress {
+    stroke: var(--color-primary-500);
+}
+
+.progress-ring--accent .progress-ring__progress {
+    stroke: var(--color-accent-500);
+}
+
+.progress-ring--success .progress-ring__progress {
+    stroke: var(--color-success-500);
+}
+
+.progress-ring--warning .progress-ring__progress {
+    stroke: var(--color-warning-500);
+}
+
+/* Glow Effects */
+.progress-ring--primary .progress-ring__progress {
+    filter: drop-shadow(0 0 6px var(--color-primary-500));
+}
+
+.progress-ring--accent .progress-ring__progress {
+    filter: drop-shadow(0 0 6px var(--color-accent-500));
+}
+
+.progress-ring--success .progress-ring__progress {
+    filter: drop-shadow(0 0 6px var(--color-success-500));
+}
+
+.progress-ring--warning .progress-ring__progress {
+    filter: drop-shadow(0 0 6px var(--color-warning-500));
+}
+
+/* Size-specific text classes */
+.progress-ring .text-xs {
+    font-size: var(--text-xs);
+}
+
+.progress-ring .text-sm {
+    font-size: var(--text-sm);
+}
+
+.progress-ring .text-base {
+    font-size: var(--text-base);
+}
+
+.progress-ring .text-lg {
+    font-size: var(--text-lg);
+}
+
+.progress-ring .text-xl {
+    font-size: var(--text-xl);
+}
+
+.progress-ring .text-2xl {
+    font-size: var(--text-2xl);
+}
+
+.progress-ring .text-3xl {
+    font-size: var(--text-3xl);
+}
